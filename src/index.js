@@ -7,7 +7,7 @@ app.get('/cep/:cep', async (req, res) => {
     const { cep } = req.params;
 
     try {
-        const response = await axios.get(`https://viacep.com.br/ws${cep}/json/`);
+        const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
         const endereco = response.data;
 
         if (endereco.erro) {
